@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Models;
+﻿using BlazorCA.Application.Common.Models;
 
-namespace CleanArchitecture.Application.Common.Interfaces;
+namespace BlazorCA.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Entities;
+﻿namespace BlazorCA.Domain.Entities;
 
 public class TodoList : BaseAuditableEntity
 {

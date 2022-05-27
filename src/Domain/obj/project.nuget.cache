@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ao0FpU4GBOR758SDRNDbseoz7GiQUUfaqS4bPt6+RGSYeUzxJJTbA8r2Xf2MN03zu9yH/THkqh1nE61yM8V+RA==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\BlazorCleanArchitecture\\src\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andreas\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Andreas\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
-using CleanArchitecture.Application.TodoLists.Queries.ExportTodos;
+using BlazorCA.Application.TodoLists.Queries.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace CleanArchitecture.Infrastructure.Files.Maps;
+namespace BlazorCA.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {
@@ -10,6 +10,6 @@ public class TodoItemRecordMap : ClassMap<TodoItemRecord>
     {
         AutoMap(CultureInfo.InvariantCulture);
 
-        Map(m => m.Done).ConvertUsing(c => c.Done ? "Yes" : "No");
+        Map(m => m.Done).Convert(c => c.Value.Done ? "Yes" : "No");
     }
 }

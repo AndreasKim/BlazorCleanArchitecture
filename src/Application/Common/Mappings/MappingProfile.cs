@@ -1,7 +1,7 @@
 using System.Reflection;
 using AutoMapper;
 
-namespace CleanArchitecture.Application.Common.Mappings;
+namespace BlazorCA.Application.Common.Mappings;
 
 public class MappingProfile : Profile
 {

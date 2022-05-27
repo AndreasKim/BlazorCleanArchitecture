@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.ValueObjects;
+﻿namespace BlazorCA.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

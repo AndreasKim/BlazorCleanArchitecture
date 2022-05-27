@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.TodoLists.Queries.ExportTodos;
-using CleanArchitecture.Infrastructure.Files.Maps;
+using BlazorCA.Application.Common.Interfaces;
+using BlazorCA.Application.TodoLists.Queries.ExportTodos;
+using BlazorCA.Infrastructure.Files.Maps;
 using CsvHelper;
 
-namespace CleanArchitecture.Infrastructure.Files;
+namespace BlazorCA.Infrastructure.Files;
 
 public class CsvFileBuilder : ICsvFileBuilder
 {
@@ -15,7 +15,7 @@ public class CsvFileBuilder : ICsvFileBuilder
         {
             using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
 
-            csvWriter.Configuration.RegisterClassMap<TodoItemRecordMap>();
+            csvWriter.Context.RegisterClassMap<TodoItemRecordMap>();
             csvWriter.WriteRecords(records);
         }
 

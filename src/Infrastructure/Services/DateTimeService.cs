@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
+﻿using BlazorCA.Application.Common.Interfaces;
 
-namespace CleanArchitecture.Infrastructure.Services;
+namespace BlazorCA.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

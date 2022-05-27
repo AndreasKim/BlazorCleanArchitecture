@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using CleanArchitecture.Application.Common.Models;
+using BlazorCA.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Application.Common.Mappings;
+namespace BlazorCA.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

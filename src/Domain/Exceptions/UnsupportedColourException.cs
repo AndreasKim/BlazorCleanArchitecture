@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Exceptions;
+﻿namespace BlazorCA.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {
