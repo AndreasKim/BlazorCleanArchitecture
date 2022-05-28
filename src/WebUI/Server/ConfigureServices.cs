@@ -4,8 +4,6 @@ using BlazorCA.Server.Filters;
 using BlazorCA.Server.Services;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
-using NSwag;
-using NSwag.Generation.Processors.Security;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -27,25 +25,11 @@ public static class ConfigureServices
                 .AddFluentValidation(x => x.AutomaticValidationEnabled = false);
 
         services.AddRazorPages();
-        services.AddSwaggerDocument();
+        services.AddSwaggerGen();
 
         // Customise default API behaviour
         services.Configure<ApiBehaviorOptions>(options =>
             options.SuppressModelStateInvalidFilter = true);
-
-        services.AddOpenApiDocument(configure =>
-        {
-            configure.Title = "BlazorCA API";
-            configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
-            {
-                Type = OpenApiSecuritySchemeType.ApiKey,
-                Name = "Authorization",
-                In = OpenApiSecurityApiKeyLocation.Header,
-                Description = "Type into the textbox: Bearer {your JWT token}."
-            });
-
-            configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
-        });
 
         return services;
     }
