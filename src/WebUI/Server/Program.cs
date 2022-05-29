@@ -1,4 +1,5 @@
 using BlazorCA.Infrastructure.Persistence;
+using BlazorCA.Server.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 
 
@@ -19,7 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseWebAssemblyDebugging();
     app.UseSwagger();
     app.UseSwaggerUI();
-
+    app.GenerateSwaggerSchema();
+    
     // Initialise and seed database
     using (var scope = app.Services.CreateScope())
     {
