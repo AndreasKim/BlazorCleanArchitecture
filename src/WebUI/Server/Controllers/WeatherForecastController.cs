@@ -7,8 +7,8 @@ namespace BlazorCA.Server.Controllers;
 public class WeatherForecastController : ApiControllerBase
 {
 
-    [HttpGet(nameof(GetWeatherForecast))]
-    public async Task<IEnumerable<WeatherForecast>> GetWeatherForecast()
+    [HttpGet(Name = nameof(WeatherForecastGet))]
+    public async Task<IEnumerable<WeatherForecast>> WeatherForecastGet()
     {
         return await Mediator.Send(new GetWeatherForecastsQuery()); 
     }
