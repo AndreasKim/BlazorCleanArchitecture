@@ -10,7 +10,11 @@
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.5" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.5" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.16.0" />
+    <PackageReference Include="NSwag.MSBuild" Version="13.16.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -19,5 +23,29 @@
     <ProjectReference Include="..\Client\BlazorCA.Client.csproj" />
   </ItemGroup>
 
+<PropertyGroup>
+  <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+</PropertyGroup>
 
+<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
+  <Message Importance="High" Text="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+
+  <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+
+  <!-- Avoids accidently triggering an additional project rebuild. -->
+  <Delete Files="$(ProjectDir)\obj\$(MSBuildProjectFile).NSwag.targets" />
+</Target>
+
+	<PropertyGroup>
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+	</PropertyGroup>
+
+	<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
+		<Message Importance="High" Text="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+
+		<Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+
+		<!-- Avoids accidently triggering an additional project rebuild. -->
+		<Delete Files="$(ProjectDir)\obj\$(MSBuildProjectFile).NSwag.targets" />
+	</Target>                                 
 </Project>

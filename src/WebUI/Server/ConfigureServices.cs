@@ -25,7 +25,6 @@ public static class ConfigureServices
                 .AddFluentValidation(x => x.AutomaticValidationEnabled = false);
 
         services.AddRazorPages();
-        services.AddSwaggerGen();
 
         // Customise default API behaviour
         services.Configure<ApiBehaviorOptions>(options =>
