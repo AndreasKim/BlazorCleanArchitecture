@@ -1,12 +1,12 @@
 ﻿@page "/todo"
-
-@*@inject ToDoItemService ItemsClient;
-@inject ToDoListsService ListsClient;*@
+@using BlazorCA.Client.Services;
+@inject ITodoItemsClient ItemsClient;
+@inject ITodoListsClient ListsClient;
 
 <h1>Todo</h1>
 
 <p>This is a complex todo list component.</p>
-@*
+
 
 <div class="row">
     <div class="col-sm-4">
@@ -50,7 +50,7 @@
                     <li class="list-group-item">
                         <div class="d-flex">
                             <div class="todo-item-checkbox">
-                                @if (item.Done ?? false) // SFD: Find a better solution.
+                                @if (item.Done) // SFD: Find a better solution.
                                 {
                                     <input type="checkbox" @onchange="() => ToggleDone(item)" checked />
                                 }
@@ -71,7 +71,7 @@
                                 }
                                 else
                                 {
-                                    <div class="todo-item-title form-control item-input-control @(item.Done ?? false ? "done-todo" : "")">
+                                    <div class="todo-item-title form-control item-input-control @(item.Done ? "done-todo" : "")">
                                         <span>@item.Title</span>
                                     </div>
                                 }
@@ -90,41 +90,41 @@
             </ul>
         </div>
     }
-</div>*@
+</div>
 
 @code {
-    //private TodosVm vm;
-    //private TodoListDto selectedList;
-    //private TodoItemDto? selectedItem;
+    private TodosVm vm;
+    private TodoListDto selectedList;
+    private TodoItemDto selectedItem;
 
-    //protected override async Task OnInitializedAsync()
-    //{
-    //    vm = await ListsClient.GetTodoItem();
-    //    selectedList = vm.Lists.First();
-    //}
+    protected override async Task OnInitializedAsync()
+    {
+        vm = await ListsClient.TodoListsGetAsync();
+        selectedList = vm.Lists.First();
+    }
 
-    //protected async Task ToggleDone(TodoItemDto item)
-    //{
-    //    item.Done = !item.Done;
+    protected async Task ToggleDone(TodoItemDto item)
+    {
+        item.Done = !item.Done;
 
-    //    await ItemsClient.UpdateTodoItem(item);
-    //}
+        await ItemsClient.TodoItemUpdateAsync(item.Id, new UpdateTodoItemCommand() { Id=item.Id, Title=item.Title, Done=item.Done });
+    }
 
-    //protected void AddItem()
-    //{
-    //    var newItem = new TodoItemDto();
+    protected void AddItem()
+    {
+        var newItem = new TodoItemDto();
 
-    //    selectedList.Items.Add(newItem);
+        selectedList.Items.Add(newItem);
 
-    //    selectedItem = newItem;
-    //}
+        selectedItem = newItem;
+    }
 
-    //protected async Task UpdateItem(TodoItemDto item)
-    //{
-    //    var result = await ItemsClient.CreateTodoItem(item);
+    protected async Task UpdateItem(TodoItemDto item)
+    {
+        var result = await ItemsClient.TodoItemCreateAsync(new CreateTodoItemCommand() { ListId=item.ListId, Title=item.Title});
 
-    //    selectedItem.Id = (int)result ;
+        selectedItem.Id = (int)result ;
 
-    //    selectedItem = null;
-    //}
+        selectedItem = null;
+    }
 }

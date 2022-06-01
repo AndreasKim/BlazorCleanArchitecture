@@ -1,5 +1,5 @@
 using BlazorCA.Client;
-using Client.Services;
+using BlazorCA.Client.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
