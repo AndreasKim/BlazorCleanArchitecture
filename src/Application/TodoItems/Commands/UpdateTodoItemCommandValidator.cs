@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace BlazorCA.Application.TodoItems.Commands.UpdateTodoItem;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public class UpdateTodoItemCommandValidator : AbstractValidator<UpdateTodoItemCommand>
 {

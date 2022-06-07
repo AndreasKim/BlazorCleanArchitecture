@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace BlazorCA.Application.TodoItems.Commands.CreateTodoItem;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public class CreateTodoItemCommandValidator : AbstractValidator<CreateTodoItemCommand>
 {

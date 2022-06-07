@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Infrastructure.Identity;
-using CleanArchitecture.Infrastructure.Persistence;
+﻿using BlazorCA.Infrastructure.Identity;
+using BlazorCA.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -9,12 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Respawn;
 
-namespace CleanArchitecture.Application.IntegrationTests;
+namespace BlazorCA.Application.IntegrationTests;
 
 [SetUpFixture]
 public partial class Testing
 {
-    private static WebApplicationFactory<Program> _factory = null!;
+    private static WebApplicationFactory<BlazorDemo.Server.Program> _factory = null!;
     private static IConfiguration _configuration = null!;
     private static IServiceScopeFactory _scopeFactory = null!;
     private static Checkpoint _checkpoint = null!;

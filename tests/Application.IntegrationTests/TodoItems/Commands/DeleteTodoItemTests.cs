@@ -1,12 +1,11 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.DeleteTodoItem;
-using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Domain.Entities;
+﻿using BlazorCA.Application.Common.Exceptions;
+using BlazorCA.Application.TodoItems.Commands;
+using BlazorCA.Application.TodoLists.Commands;
+using BlazorCA.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.IntegrationTests.TodoItems.Commands;
+namespace BlazorCA.Application.IntegrationTests.TodoItems.Commands;
 
 using static Testing;
 

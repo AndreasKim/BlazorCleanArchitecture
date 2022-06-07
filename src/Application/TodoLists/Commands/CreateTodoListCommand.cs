@@ -2,7 +2,7 @@
 using BlazorCA.Domain.Entities;
 using MediatR;
 
-namespace BlazorCA.Application.TodoLists.Commands.CreateTodoList;
+namespace BlazorCA.Application.TodoLists.Commands;
 
 public record CreateTodoListCommand : IRequest<int>
 {

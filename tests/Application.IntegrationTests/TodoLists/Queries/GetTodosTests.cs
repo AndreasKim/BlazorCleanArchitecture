@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.TodoLists.Queries.GetTodos;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.ValueObjects;
+﻿using BlazorCA.Application.TodoLists.Queries.GetTodos;
+using BlazorCA.Domain.Entities;
+using BlazorCA.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.IntegrationTests.TodoLists.Queries;
+namespace BlazorCA.Application.IntegrationTests.TodoLists.Queries;
 
 using static Testing;
 

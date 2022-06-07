@@ -4,7 +4,7 @@ using BlazorCA.Domain.Entities;
 using BlazorCA.Domain.Events;
 using MediatR;
 
-namespace BlazorCA.Application.TodoItems.Commands.DeleteTodoItem;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public record DeleteTodoItemCommand(int Id) : IRequest;
 

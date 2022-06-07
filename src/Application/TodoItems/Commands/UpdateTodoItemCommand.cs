@@ -3,7 +3,7 @@ using BlazorCA.Application.Common.Interfaces;
 using BlazorCA.Domain.Entities;
 using MediatR;
 
-namespace BlazorCA.Application.TodoItems.Commands.UpdateTodoItem;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public record UpdateTodoItemCommand : IRequest
 {

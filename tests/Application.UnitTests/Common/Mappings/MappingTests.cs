@@ -1,12 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using AutoMapper;
-using CleanArchitecture.Application.Common.Mappings;
-using CleanArchitecture.Application.Common.Models;
-using CleanArchitecture.Application.TodoLists.Queries.GetTodos;
-using CleanArchitecture.Domain.Entities;
+using BlazorCA.Application.Common.Mappings;
+using BlazorCA.Application.Common.Models;
+using BlazorCA.Application.TodoLists.Queries.GetTodos;
+using BlazorCA.Domain.Entities;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.UnitTests.Common.Mappings;
+namespace BlazorCA.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {

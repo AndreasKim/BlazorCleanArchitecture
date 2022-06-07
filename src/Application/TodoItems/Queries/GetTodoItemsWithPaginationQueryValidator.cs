@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace BlazorCA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace BlazorCA.Application.TodoItems.Queries;
 
 public class GetTodoItemsWithPaginationQueryValidator : AbstractValidator<GetTodoItemsWithPaginationQuery>
 {

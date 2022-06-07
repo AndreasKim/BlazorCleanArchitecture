@@ -1,5 +1,4 @@
 ﻿namespace BlazorDemo.Server;
-using Autofac;
 using Autofac.Extensions.DependencyInjection;
 
 public class Program

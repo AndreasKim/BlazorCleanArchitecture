@@ -4,7 +4,7 @@ using BlazorCA.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorCA.Application.TodoLists.Commands.DeleteTodoList;
+namespace BlazorCA.Application.TodoLists.Commands;
 
 public record DeleteTodoListCommand(int Id) : IRequest;
 

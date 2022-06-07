@@ -1,6 +1,4 @@
-﻿using BlazorCA.Application.TodoLists.Commands.CreateTodoList;
-using BlazorCA.Application.TodoLists.Commands.DeleteTodoList;
-using BlazorCA.Application.TodoLists.Commands.UpdateTodoList;
+﻿using BlazorCA.Application.TodoLists.Commands;
 using BlazorCA.Application.TodoLists.Queries.ExportTodos;
 using BlazorCA.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Mvc;

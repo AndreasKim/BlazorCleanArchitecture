@@ -1,7 +1,4 @@
-﻿using BlazorCA.Application.TodoItems.Commands.CreateTodoItem;
-using BlazorCA.Application.TodoItems.Commands.DeleteTodoItem;
-using BlazorCA.Application.TodoItems.Commands.UpdateTodoItem;
-using BlazorCA.Application.TodoItems.Commands.UpdateTodoItemDetail;
+﻿using BlazorCA.Application.TodoItems.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorCA.Server.Controllers;

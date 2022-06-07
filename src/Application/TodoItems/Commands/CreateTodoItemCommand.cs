@@ -3,7 +3,7 @@ using BlazorCA.Domain.Entities;
 using BlazorCA.Domain.Events;
 using MediatR;
 
-namespace BlazorCA.Application.TodoItems.Commands.CreateTodoItem;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

@@ -4,7 +4,7 @@ using BlazorCA.Domain.Entities;
 using BlazorCA.Domain.Enums;
 using MediatR;
 
-namespace BlazorCA.Application.TodoItems.Commands.UpdateTodoItemDetail;
+namespace BlazorCA.Application.TodoItems.Commands;
 
 public record UpdateTodoItemDetailCommand : IRequest
 {

@@ -2,7 +2,7 @@
 using BlazorCA.Application.Common.Security;
 using MediatR;
 
-namespace BlazorCA.Application.TodoLists.Commands.PurgeTodoLists;
+namespace BlazorCA.Application.TodoLists.Commands;
 
 [Authorize(Roles = "Administrator")]
 [Authorize(Policy = "CanPurge")]

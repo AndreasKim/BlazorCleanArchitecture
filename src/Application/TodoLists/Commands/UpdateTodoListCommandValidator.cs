@@ -2,7 +2,7 @@
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorCA.Application.TodoLists.Commands.UpdateTodoList;
+namespace BlazorCA.Application.TodoLists.Commands;
 
 public class UpdateTodoListCommandValidator : AbstractValidator<UpdateTodoListCommand>
 {

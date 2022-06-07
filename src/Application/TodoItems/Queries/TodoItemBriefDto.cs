@@ -1,7 +1,7 @@
 ﻿using BlazorCA.Application.Common.Mappings;
 using BlazorCA.Domain.Entities;
 
-namespace BlazorCA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace BlazorCA.Application.TodoItems.Queries;
 
 public class TodoItemBriefDto : IMapFrom<TodoItem>
 {

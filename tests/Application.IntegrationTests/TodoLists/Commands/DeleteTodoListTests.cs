@@ -1,11 +1,10 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Application.TodoLists.Commands.DeleteTodoList;
-using CleanArchitecture.Domain.Entities;
+﻿using BlazorCA.Application.Common.Exceptions;
+using BlazorCA.Application.TodoLists.Commands;
+using BlazorCA.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.IntegrationTests.TodoLists.Commands;
+namespace BlazorCA.Application.IntegrationTests.TodoLists.Commands;
 
 using static Testing;
 

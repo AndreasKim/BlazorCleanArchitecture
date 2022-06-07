@@ -5,7 +5,7 @@ using BlazorCA.Application.Common.Mappings;
 using BlazorCA.Application.Common.Models;
 using MediatR;
 
-namespace BlazorCA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace BlazorCA.Application.TodoItems.Queries;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {
